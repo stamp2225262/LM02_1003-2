@@ -9,39 +9,9 @@
     "ownerEmail": "khun.a@mail.com"
   },
   {
-    "petId": 2,
-    "petName": "น้อง B",
-    "petType": 20,
-    "petDesc": "รายละเอียดน้อง B",
-    "petSex": "M",
-    "ownerName": "นางสาว B",
-    "ownerEmail": "khun.b@mail.com"
+    ..........: ..........
   },
   {
-    "petId": 3,
-    "petName": "น้อง C",
-    "petType": 10,
-    "petDesc": "รายละเอียดน้อง C",
-    "petSex": "F",
-    "ownerName": "นาง C",
-    "ownerEmail": "khun.c@mail.com"
-  },
-  {
-    "petId": 4,
-    "petName": "Aaa",
-    "petType": 10,
-    "petSex": "M",
-    "petDesc": "Aaa",
-    "ownerName": "Aaa",
-    "ownerEmail": "aaa@mail.com"
-  },
-  {
-    "petId": 5,
-    "petName": "Bbb",
-    "petType": 30,
-    "petSex": "F",
-    "petDesc": "Bbb",
-    "ownerName": "Bbb",
-    "ownerEmail": "bbb@mail.com"
+    ..........: ..........
   }
 ]

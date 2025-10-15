@@ -1,7 +1,7 @@
-import PetFooter from "../components/footer";
-import PetMenu from "../components/menu";
+import .......... from "..........";
+import .......... from "..........";
 import { Link } from "react-router";
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function InsertForm ()
 {
@@ -11,7 +11,7 @@ const [formData, setFormData] = useState({
     petSex: '',
     petDesc: '',
     ownerName: '',
-    ownerEmail: '',
+    ownerEmail: ''
   });
   const [message, setMessage] = useState('');
 
@@ -26,8 +26,8 @@ const [formData, setFormData] = useState({
     setMessage('กำลังเพิ่มข้อมูลสัตว์เลี้ยง...');
     
     try {
-      const response = await fetch('http://localhost:5000/api/insertdata', {
-        method: 'POST',
+      const response = .......... fetch('..........', {
+        method: '..........',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             ...formData,
@@ -39,14 +39,10 @@ const [formData, setFormData] = useState({
         const result = await response.json();
         setMessage(`[INFO] เพิ่มข้อมูลสัตว์เลี้ยงสำเร็จ! รหัส: ${result.addedItem.petId}`);
         console.log('ข้อมูลสัตว์เลี้ยงที่ถูกเพิ่ม:', result.addedItem);
-        setFormData({
-          petName: '',
-          petType: 0,
-          petSex: '',
-          petDesc: '',
-          ownerName: '',
-          ownerEmail: '',
-        });
+        // เคลียร์ฟอร์ม
+        setFormData(
+          ..........
+        );
       } else {
         setMessage('[ERROR] เพิ่มข้อมูลสัตว์เลี้ยงไม่สำเร็จ ;(');
       }
@@ -59,10 +55,10 @@ const [formData, setFormData] = useState({
   return (
     <>
       <div className="min-h-screen bg-gray-100 p-8">
-        <PetMenu />
+        <.......... />
     <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4">เพิ่มข้อมูลสัตว์เลี้ยงใหม่</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={..........}>
         <div className="mb-4">
           <label htmlFor="petName" className="block text-gray-700">ชื่อสัตว์เลี้ยง</label>
           <input
@@ -79,7 +75,7 @@ const [formData, setFormData] = useState({
           <label htmlFor="petType" className="block text-gray-700">ประเภทสัตว์เลี้ยง</label>
           <select
             id="petType"
-            name="petType"
+            name=".........."
             onChange={handleChange}
             className="w-full mt-1 p-2 border rounded-md"
             required
@@ -115,8 +111,8 @@ const [formData, setFormData] = useState({
           <label htmlFor="petDesc" className="block text-gray-700">รายละเอียด</label>
           <textarea
             id="petDesc"
-            name="petDesc"
-            value={formData.petDesc}
+            name=".........."
+            value={formData.__________}
             onChange={handleChange}
             className="w-full mt-1 p-2 border rounded-md"
             rows="3"
@@ -128,9 +124,9 @@ const [formData, setFormData] = useState({
           <input
             type="text"
             id="ownerName"
-            name="ownerName"
-            value={formData.ownerName}
-            onChange={handleChange}
+            name=".........."
+            value={formData.__________}
+            onChange={..........}
             className="w-full mt-1 p-2 border rounded-md"
             required
           />
@@ -140,8 +136,8 @@ const [formData, setFormData] = useState({
           <input
             type="email"
             id="ownerEmail"
-            name="ownerEmail"
-            value={formData.ownerEmail}
+            name=".........."
+            value={formData.__________}
             onChange={handleChange}
             className="w-full mt-1 p-2 border rounded-md"
             required
@@ -159,7 +155,7 @@ const [formData, setFormData] = useState({
           <div className="mt-4">
             <Link to="/" className="text-orange-600 hover:text-orange-900 font-semibold">ย้อนกลับ</Link>
           </div>
-        <PetFooter stdname=".........." fburl=".........." />
+        <.......... stdname=".........." fburl=".........." />
       </div>
     </>
   );

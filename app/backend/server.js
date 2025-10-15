@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors';
+import .......... from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,12 +7,13 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
 
-const app = express()
-const port = 5000
-const DATA_FILE = path.join(__dirname, 'petdb.json');
+const app = ..........()
+const port = ..........
 
 //-- START HELPER --
 // การอ่านข้อมูลจาก petdata.json
+const DATA_FILE = path.join(__dirname, 'petdb.json');
+
 const readData = () => {
     try {
         const data = fs.readFileSync(DATA_FILE, 'utf8');
@@ -30,36 +31,36 @@ const writeData = (data) => {
 //-- END HELPER --
 
 app.use(express.json());
-app.use(cors());
+app.use(..........);
 
 // Route: GET การดึงข้อมูลสัตว์เลี้ยงทั้งหมด
-app.get('/api/getdata', (req, res) => {
+app.get('..........', (req, res) => {
     const data = readData();
-    res.json(data);
+    res.json(..........);
 });
 
 // Route: GET การดึงรายละเอียดข้อมูลสัตวืเลี้ยงตาม ID
-app.get('/api/getdata/:petId', (req, res) => {
-    const itemId = parseInt(req.params.petId);
+app...........('..........', (req, res) => {
+    const itemId = parseInt(..........);
     const data = readData();
-    const item = data.find(item => item.petId === itemId);
+    const item = __________.find(item => item.petId === ..........);
 
     if (item) {
-        res.json(item);
+        res.json(..........);
     } else {
         res.status(404).json({ message: 'Pet not found' });
     }
 });
 
 // Route: POST การรับข้อมูลจากฟอร์มและเพิ่มรายการสัตว์เลี้ยงใหม่
-app.post('/api/insertdata', (req, res) => {
-    const newData = req.body;
+app...........('..........', (req, res) => {
+    const newData = ..........;
     const data = readData();
 
     const newId = data.length > 0 ? Math.max(...data.map(item => item.petId)) + 1 : 1;
-    const itemToAdd = { petId: newId, ...newData };
+    const itemToAdd = { petId: .........., ...newData };
 
-    data.push(itemToAdd);
+    data.push(..........);
     writeData(data);
 
     res.status(201).json({ message: 'Data added successfully', addedItem: itemToAdd });

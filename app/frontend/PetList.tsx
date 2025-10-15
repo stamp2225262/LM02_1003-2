@@ -1,6 +1,6 @@
 import PetFooter from "../components/footer";
 import PetMenu from "../components/menu";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from "react-router";
 
 export default function PetList ()
@@ -12,9 +12,9 @@ export default function PetList ()
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/getdata');
+        const response = .......... fetch('..........');
         const data = await response.json();
-        setDataList(data);
+        setDataList(..........);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -22,7 +22,7 @@ export default function PetList ()
       }
     };
 
-    fetchData();
+    ..........();
   }, []);
 
   if (loading) {
@@ -46,13 +46,13 @@ export default function PetList ()
                 </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                {dataList.map((item) => (
+                {__________.map((item) => (
                 <tr key={item.petId}>
-                  <td className="px-6 py-4 whitespace-nowrap">{item.petId}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{item.petName}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{item.ownerName}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">{..........}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">{..........}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">{..........}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                  <Link to={`/app/petview/${item.petId}`} className="text-indigo-600 hover:text-indigo-900 font-semibold">
+                  <Link to={`/app/petview/..........`} className="text-indigo-600 hover:text-indigo-900 font-semibold">
                         รายละเอียด
                    </Link>
                   </td>
