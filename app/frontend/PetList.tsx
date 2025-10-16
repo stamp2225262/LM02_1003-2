@@ -25,7 +25,7 @@ export default function PetList() {
   }, []);
 
   if (loading) {
-    return <p className="text-center">กำลังโหลดข้อมูล...</p>;
+    return <p className="text-center">กำลังโหลดข้อมูล..</p>;
   }
 
   return (
