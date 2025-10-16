@@ -13,9 +13,9 @@ export function Welcome() {
               <div className="flex items-center gap-4">
                   <img className="w-10 h-10 rounded-full" src="/images/profile-picture.png" title="เปลี่ยนเป็นรูปนักศึกษา" />
                   <div className="font-medium dark:text-white">
-                      <div>ชื่อ-สกุล: ..........</div>
-                      <div>รหัสนักศึกษา: ..........</div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">อีเมล: ..........</div>
+                      <div>ชื่อ-สกุล: อรรถพร สำอางค์ญาติ</div>
+                      <div>รหัสนักศึกษา: 1003-2</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">อีเมล: atthapron.sam@rmutto.ac.th</div>
                   </div>
               </div>
             </div>
